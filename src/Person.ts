@@ -49,4 +49,17 @@ abstract class Person {
         this.username = username;
     }
 
+    passwordCorrect(password: string): boolean {
+        return password === this.password;
+    }
+
+    changePassword(currentPassword: string, newPassword: string): boolean {
+        if (currentPassword === this.password) {
+            if(newPassword.length >= 8)
+            this.password = newPassword;
+            return true;
+        }
+        return false;
+    }
+
 }
