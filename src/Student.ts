@@ -11,8 +11,12 @@ class Student extends Person {
         return this.studentID;
     }
 
-    setStudentID(studentID: string): void {
-        this.studentID = studentID;
+    setStudentID(studentID: string): boolean {
+        if (isAllNumber(studentID) && studentID.length === 9) {
+            this.studentID = studentID;
+            return true;
+        }
+        return false;
     }
 
 }
