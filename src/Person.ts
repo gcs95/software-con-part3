@@ -18,16 +18,24 @@ abstract class Person {
         return this.firstName;
     }
 
-    setFirstName(firstName: string): void {
-        this.firstName = firstName;
+    setFirstName(firstName: string): boolean {
+        if (isAllLetter(firstName) && firstName.length >=  2) {
+            this.firstName = firstName;
+            return true;
+        }
+        return false;
     }
 
     getLastName(): string {
         return this.lastName;
     }
 
-    setLastName(lastName: string): void {
-        this.lastName = lastName;
+    setLastName(lastName: string): boolean {
+        if (isAllLetter(lastName) && lastName.length >= 2){
+            this.lastName = lastName; 
+            return true;
+        }
+        return false;
     }
 
     getFullName(): string {
@@ -41,12 +49,17 @@ abstract class Person {
     setGender(gender: Gender): void {
         this.gender = gender;
     }
+
     getUsername(): string {
         return this.username;
     }
 
-    setUsername(username: string): void {
-        this.username = username;
+    setUsername(username: string): boolean {
+        if(isAlphaNumeric(username) && username.length >= 5){
+            this.username = username;
+            return true;
+        }
+       return false;
     }
 
     passwordCorrect(password: string): boolean {
