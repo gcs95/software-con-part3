@@ -1,4 +1,9 @@
-class Course {
+import { Instructor } from './Instructor'
+import { Day } from './Day';
+import { Time } from './Time';
+import { isAllLetter, isAllNumber, isAlphaNumeric } from './Utils';
+
+export class Course {
 
     private courseID: string;
     private courseName: string;
