@@ -1,4 +1,4 @@
-class Person {
+abstract class Person {
 
     private firstName: string;
     private lastName: string;
