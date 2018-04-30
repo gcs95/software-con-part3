@@ -11,8 +11,12 @@ class Instructor extends Person {
         return this.instructorID;
     }
 
-    setInstructorID(instructorID: string): void {
-        this.instructorID = instructorID;
+    setInstructorID(instructorID: string): boolean {
+        if(isAllNumber(instructorID)){
+            this.instructorID = instructorID;
+            return true;
+        }
+        return false;
     }
     
 }
