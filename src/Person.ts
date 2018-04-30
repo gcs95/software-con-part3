@@ -14,4 +14,39 @@ abstract class Person {
         this.gender = gender;
     }
 
+    getFirstName(): string {
+        return this.firstName;
+    }
+
+    setFirstName(firstName: string): void {
+        this.firstName = firstName;
+    }
+
+    getLastName(): string {
+        return this.lastName;
+    }
+
+    setLastName(lastName: string): void {
+        this.lastName = lastName;
+    }
+
+    getFullName(): string {
+        return this.firstName + " " + this.lastName;
+    }
+
+    getGender(): Gender {
+        return this.gender;
+    }
+
+    setGender(gender: Gender): void {
+        this.gender = gender;
+    }
+    getUsername(): string {
+        return this.username;
+    }
+
+    setUsername(username: string): void {
+        this.username = username;
+    }
+
 }
