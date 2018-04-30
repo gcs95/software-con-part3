@@ -9,6 +9,6 @@ function isAllLetter(s: string): boolean {
 }
 
 /* Check if the string contains only A-z and digits. */
-function isAlphaNumeral(s: string): boolean {
+function isAlphaNumeric(s: string): boolean {
     return new RegExp("^[a-zA-Z0-9_.-]*$").test(s);
 }
