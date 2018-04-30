@@ -15,7 +15,6 @@
         "src/Course.ts",
         "src/Day.ts",
         "src/Time.ts",
-        "src/DynamicList.ts",
         "src/Utils.ts"
     ]
 }
