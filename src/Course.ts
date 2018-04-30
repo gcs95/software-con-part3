@@ -6,8 +6,8 @@ class Course {
     private courseCredit: number;
     private courseDays: Day[];
     private courseTime: Time;
-  
-  	constructor(courseID: string, courseName: string, courseInstructor: Instructor, courseCredit: number, courseDays: Day[], courseTime: Time) {
+
+    constructor(courseID: string, courseName: string, courseInstructor: Instructor, courseCredit: number, courseDays: Day[], courseTime: Time) {
         this.courseID = courseID;
         this.courseName = courseName;
         this.courseInstructor = courseInstructor;
@@ -15,13 +15,17 @@ class Course {
         this.courseDays = courseDays;
         this.courseTime = courseTime;
     }
-  
-		getCourseID(): string {
+
+    getCourseID(): string {
         return this.courseID;
     }
 
-    setCourseID(courseID: string): void {
+    setCourseID(courseID: string): boolean {
+        if (isAllNumber(courseID) && courseID.length === 6) {
             this.courseID = courseID;
+            return true;
+        }
+        return false;
     }
 
     getCourseName(): string {
@@ -29,7 +33,11 @@ class Course {
     }
 
     setCourseName(courseName: string): boolean {
-        this.courseName = this.courseName;
+        if (courseName.length >= 3) {
+            this.courseName = this.courseName;
+            return true;
+        }
+        return false;
     }
 
     getCourseInstructor(): Instructor {
@@ -44,8 +52,11 @@ class Course {
         return this.courseCredit;
     }
 
-    setCourseCredit(courseCredit: number): void {
-        this.courseCredit = courseCredit;
+    setCourseCredit(courseCredit: number): boolean {
+        if (courseCredit > 0 && courseCredit <= 9) {
+            this.courseCredit = courseCredit;
+            return true;
+        } return false;
     }
 
     getCourseDays(): Day[] {
@@ -63,5 +74,5 @@ class Course {
     setCourseTime(courseTime: Time): void {
         this.courseTime = courseTime;
     }
-  
+
 }
