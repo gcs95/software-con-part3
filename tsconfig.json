@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outDir":"compiled/"
+    },
+    "files": [
+        "src/Person.ts",
+        "src/Student.ts",
+        "src/Instructor.ts",
+        "src/Admin.ts",
+        "src/Gender.ts",
+        "src/Course.ts",
+        "src/Day.ts",
+        "src/Time.ts",
+        "src/DynamicList.ts",
+        "src/Utils.ts"
+    ]
+}
