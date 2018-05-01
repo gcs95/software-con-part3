@@ -25,7 +25,7 @@ var Course = (function () {
     };
     Course.prototype.setCourseName = function (courseName) {
         if (courseName.length >= 3) {
-            this.courseName = this.courseName;
+            this.courseName = courseName;
             return true;
         }
         return false;
