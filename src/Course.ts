@@ -39,7 +39,7 @@ export class Course {
 
     setCourseName(courseName: string): boolean {
         if (courseName.length >= 3) {
-            this.courseName = this.courseName;
+            this.courseName = courseName;
             return true;
         }
         return false;
