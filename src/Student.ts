@@ -1,4 +1,8 @@
-class Student extends Person {
+import { Person } from './Person';
+import { Gender } from './Gender';
+import { isAllLetter, isAllNumber, isAlphaNumeric } from './Utils';
+
+export class Student extends Person {
 
     private studentID: string;
 

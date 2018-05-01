@@ -1,4 +1,7 @@
-abstract class Person {
+import { Gender } from './Gender';
+import { isAllLetter, isAllNumber, isAlphaNumeric } from './Utils';
+
+export abstract class Person {
 
     private firstName: string;
     private lastName: string;
