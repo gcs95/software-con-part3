@@ -1,3 +1,6 @@
+"use strict";
+exports.__esModule = true;
+var Utils_1 = require("./Utils");
 var Course = (function () {
     function Course(courseID, courseName, courseInstructor, courseCredit, courseDays, courseTime) {
         this.courseID = courseID;
@@ -11,7 +14,7 @@ var Course = (function () {
         return this.courseID;
     };
     Course.prototype.setCourseID = function (courseID) {
-        if (isAllNumber(courseID) && courseID.length === 6) {
+        if (Utils_1.isAllNumber(courseID) && courseID.length === 6) {
             this.courseID = courseID;
             return true;
         }
@@ -57,3 +60,4 @@ var Course = (function () {
     };
     return Course;
 }());
+exports.Course = Course;

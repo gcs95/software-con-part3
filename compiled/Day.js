@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 var Day;
 (function (Day) {
     Day["MON"] = "Mon";
@@ -5,4 +7,4 @@ var Day;
     Day["WED"] = "Wed";
     Day["THU"] = "Thu";
     Day["FRI"] = "Fri";
-})(Day || (Day = {}));
+})(Day = exports.Day || (exports.Day = {}));

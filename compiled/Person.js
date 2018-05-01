@@ -1,3 +1,6 @@
+"use strict";
+exports.__esModule = true;
+var Utils_1 = require("./Utils");
 var Person = (function () {
     function Person(firstName, lastName, gender, username, password) {
         this.firstName = firstName;
@@ -10,7 +13,7 @@ var Person = (function () {
         return this.firstName;
     };
     Person.prototype.setFirstName = function (firstName) {
-        if (isAllLetter(firstName) && firstName.length >= 2) {
+        if (Utils_1.isAllLetter(firstName) && firstName.length >= 2) {
             this.firstName = firstName;
             return true;
         }
@@ -20,7 +23,7 @@ var Person = (function () {
         return this.lastName;
     };
     Person.prototype.setLastName = function (lastName) {
-        if (isAllLetter(lastName) && lastName.length >= 2) {
+        if (Utils_1.isAllLetter(lastName) && lastName.length >= 2) {
             this.lastName = lastName;
             return true;
         }
@@ -39,7 +42,7 @@ var Person = (function () {
         return this.username;
     };
     Person.prototype.setUsername = function (username) {
-        if (isAlphaNumeric(username) && username.length >= 5) {
+        if (Utils_1.isAlphaNumeric(username) && username.length >= 5) {
             this.username = username;
             return true;
         }
@@ -58,3 +61,4 @@ var Person = (function () {
     };
     return Person;
 }());
+exports.Person = Person;

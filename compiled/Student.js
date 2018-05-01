@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -8,6 +9,9 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+exports.__esModule = true;
+var Person_1 = require("./Person");
+var Utils_1 = require("./Utils");
 var Student = (function (_super) {
     __extends(Student, _super);
     function Student(firstName, lastName, gender, username, password, studentID) {
@@ -19,11 +23,12 @@ var Student = (function (_super) {
         return this.studentID;
     };
     Student.prototype.setStudentID = function (studentID) {
-        if (isAllNumber(studentID) && studentID.length === 9) {
+        if (Utils_1.isAllNumber(studentID) && studentID.length === 9) {
             this.studentID = studentID;
             return true;
         }
         return false;
     };
     return Student;
-}(Person));
+}(Person_1.Person));
+exports.Student = Student;
